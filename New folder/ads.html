@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعلاناتي</title>
+    <link rel="stylesheet" href="./csss2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>إعلاناتي</h1>
+            <button class="add-ad">
+                <i class="fas fa-plus"></i> إضافة إعلان
+            </button>
+        </div>
+
+        <div class="ad-box">
+            <div class="ad-details">
+                <label for="ad-name">اسم الإعلان:</label>
+                <input type="text" id="ad-name" placeholder="اسم الإعلان">
+
+                <label for="ad-description">وصف الإعلان:</label>
+                <input type="text" id="ad-description" placeholder="وصف الإعلان">
+            </div>
+
+            <div class="ad-image">
+                <img src="./black.jpg" alt="إعلان" />
+            </div>
+        </div>
+
+        <div class="ad-actions">
+            <button class="btn edit"><i class="fas fa-edit"></i> تعديل</button>
+            <button class="btn delete"><i class="fas fa-trash"></i> حذف</button>
+            <button class="btn share"><i class="fas fa-share"></i> مشاركة</button>
+            <button class="btn message"><i class="fas fa-envelope"></i> الرسائل</button>
+        </div>
+    </div>
+
+</body>
+</html>

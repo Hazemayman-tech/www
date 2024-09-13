@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat Box</h2>
+            <button id="signup-btn"><i class="fa-solid fa-user-plus"></i> Sign Up </button>
+        </div>
+
+        <div class="chat-box">
+            <div class="chat-message user-message">Hello! How can I help you today?</div>
+            <div class="chat-message my-message">I need help with my order.</div>
+        </div>
+
+        <div class="chat-input">
+            <button id="file-upload-btn"><i class="fa-solid fa-file-upload"></i></button>
+            <input type="file" id="file-upload" style="display:none;">
+            <input type="text" placeholder="Type your message..." id="chat-input-field">
+            <button id="emoji-btn"><i class="fa-solid fa-smile"></i></button>
+            <button id="voice-record-btn"><i class="fa-solid fa-microphone"></i></button>
+            <button id="send-btn"><i class="fa-solid fa-paper-plane"></i> Send</button>
+        </div>
+    </div>
+<script>
+    document.getElementById("signup-btn").addEventListener("click", function() {
+    window.location.href = "./index.html";
+});
+// Placeholder for emoji button functionality
+document.getElementById("emoji-btn").addEventListener("click", function() {
+    alert("Emoji picker coming soon!");
+});
+
+// Placeholder for send button functionality
+document.getElementById("send-btn").addEventListener("click", function() {
+    const inputField = document.getElementById("chat-input-field");
+    const message = inputField.value.trim();
+    
+    if (message) {
+        const chatBox = document.querySelector(".chat-box");
+        const newMessage = document.createElement("div");
+        newMessage.classList.add("chat-message", "my-message");
+        newMessage.textContent = message;
+        
+        chatBox.appendChild(newMessage);
+        chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to the bottom
+        inputField.value = "";  // Clear input
+    }
+});
+
+// File upload button functionality
+document.getElementById("file-upload-btn").addEventListener("click", function() {
+    document.getElementById("file-upload").click();
+});
+
+document.getElementById("file-upload").addEventListener("change", function(event) {
+    const fileName = event.target.files[0].name;
+    alert("Selected file: " + fileName);
+});
+
+// Voice record button functionality (Placeholder)
+let isRecording = false;
+
+document.getElementById("voice-record-btn").addEventListener("click", function() {
+    isRecording = !isRecording;
+    
+    if (isRecording) {
+        this.style.backgroundColor = '#ff3d00';
+        alert("Recording started... (This is just a placeholder)");
+    } else {
+        this.style.backgroundColor = '#f44336';
+        alert("Recording stopped... (This is just a placeholder)");
+    }
+});
+
+// Redirection to index.html when clicking Sign Up
+document.getElementById("signup-btn").addEventListener("click", function() {
+    window.location.href = "./index.html";
+});
+
+
+</script>
+</body>
+</html>

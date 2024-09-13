@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./chats.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <button class="add-ad-btn" onclick="openadd()" ><i class="fa fa-plus"></i> أضف إعلان</button>
+        <h1 class="chat-title">دردشاتي</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="ابحث عن محادثة...">
+            <button onclick="search()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" onclick="openChat()">
+            <div class="chat-avatar">
+               <img src="./black.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h3>الأسم</h3>
+                <p>الرسالة هنا...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open a new page when chat is clicked
+        function openChat() {
+            window.location.href = './chating.html';
+        }
+        function openadd() {
+            window.location.href = './ads.html';
+        }
+        // Function to handle search
+        function search() {
+            alert('Search function is under development!');
+        }
+    </script>
+</body>
+</html>

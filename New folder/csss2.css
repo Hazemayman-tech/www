@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.add-ad {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-ad i {
+    margin-right: 10px;
+}
+
+.add-ad:hover {
+    background-color: #218838;
+}
+
+.ad-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ad-details {
+    text-align: right;
+    width: 70%;
+}
+
+.ad-details label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.ad-details input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.ad-image {
+    width: 200px; 
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ad-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px; 
+}
+
+.ad-actions .btn {
+    padding: 15px 30px; 
+    border-radius: 10px;
+    color: white;
+    font-size: 20px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.ad-actions .btn i {
+    margin-right: 10px;
+}
+
+.ad-actions .edit {
+    background-color: #ffc107;
+}
+
+.ad-actions .edit:hover {
+    background-color: #e0a800;
+}
+
+.ad-actions .delete {
+    background-color: #dc3545;
+}
+
+.ad-actions .delete:hover {
+    background-color: #c82333;
+}
+
+.ad-actions .share {
+    background-color: #007bff;
+}
+
+.ad-actions .share:hover {
+    background-color: #0069d9;
+}
+
+.ad-actions .message {
+    background-color: #17a2b8;
+}
+
+.ad-actions .message:hover {
+    background-color: #138496;
+}
